@@ -95,7 +95,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 qrStr.append(" E.age = " + age.intValue() + "");
                 mSrch = true;
             }
-            if ((id != -1)&&(!id.equals(""))) {
+            if ((id != null)&&(id != 0)) {
                 if (mSrch)
                     qrStr.append(" and");
                 qrStr.append(" E.id = " + id.intValue() + "");

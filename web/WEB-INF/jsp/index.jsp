@@ -6,41 +6,41 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="<%=getServletContext().getContextPath()%>/style/general.css" rel="stylesheet" type="text/css"></link>
+        <link href="<c:url value="/resources/css/general.css" />" rel="stylesheet"></link>
         <title>Employee list</title>
     </head>
 
     <body>
+        <div id="empTable" class="mainCss">
+            <table border="1">
+                <tr>
+                    
+                    <!-- <td>id</td> -->
+                    <td><b>First Name</b></td>
+                    <td><b>Second Name</b></td>
+                    <td><b>Last Name</b></td>
+                    <td><b>Age</b></td>
+                    <td><b>Experience</b></td>
+                    <td><b>Description</b></td>
+                    <td><a href="addEmployee.htm">Add new</a></td>
+                    <td><a href="searchEmployee.htm">Search</a></td>
+                </tr>
 
-        <a href="addEmployee.htm">Добавить</a>
-        <table border="1">
-            <tr>
-                <td>id</td>
-                <td>First Name</td>
-                <td>Second Name</td>
-                <td>Last Name</td>
-                <td>Age</td>
-                <td>Experience</td>
-                <td>Description</td>
-                
-                <td></td>
-                <td></td>
-            </tr>
-
-            <c:forEach items="${empList}" var="emp"> 
-            <tr>    
-                <td>${emp.id}</td>
-                <td>${emp.first_name}</td>
-                <td>${emp.second_name}</td>
-                <td>${emp.last_name}</td>
-                <td>${emp.age}</td>
-                <td>${emp.experience}</td>
-                <td>${emp.description}</td>
-                <td><a href="updateEmployee.htm?id=${emp.id}">update</a></td>
-                <td><a href="deleteEmployee.htm?id=${emp.id}">delete</a></td>
-            </tr>
-            </c:forEach>
-            
-        </table>
+                <c:forEach items="${empList}" var="emp"> 
+                <tr>    
+                    <!--  <td>${emp.id}</td> -->
+                    <td>${emp.first_name}</td>
+                    <td>${emp.second_name}</td>
+                    <td>${emp.last_name}</td>
+                    <td>${emp.age}</td>
+                    <td>${emp.experience}</td>
+                    <td>${emp.description}</td>
+                    <td><a href="updateEmployee.htm?id=${emp.id}">Update</a></td>
+                    <td><a href="deleteEmployee.htm?id=${emp.id}">Delete</a></td>
+                </tr>
+                </c:forEach>
+                <tr><td colspan="2"><a href="getAll.htm">Show all employees</a></td></tr>
+            </table>
+        </div>
     </body>
 </html>

@@ -1,0 +1,52 @@
+* {
+    font-family: helvetica;
+    font-size: 12pt;
+}
+
+.mainCss {
+    border-radius: 4px;
+    background-color: gainsboro;
+    
+    display: inline-block;
+    padding: 7px;
+}
+
+#empForm {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#empForm input {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#empTable b {
+    font-weight: bold;
+    padding: 2px;
+}
+
+#empTable a {
+    text-decoration: none;
+    font-style: italic;
+    color: teal;
+    
+    padding: 2px;
+}
+
+#empTable a:hover { 
+    text-decoration: none;
+    color: steelblue;
+   } 
+
+#empTable table {
+    border-collapse: collapse;
+   }
+   
+#empTable tr:nth-child(2n) {
+    background: #f0f0f0; 
+   } 
+   
+#empTable tr:nth-child(1) {
+    background: silver;
+   }    
