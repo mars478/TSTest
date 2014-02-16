@@ -3,8 +3,64 @@
     font-size: 12pt;
 }
 
+#wrapper{
+    height: auto !important;
+    margin: 2% 10% 0 10%;
+}
+
+#header{
+    height: 10%;
+    //background-color: #a3a3a3;
+    background: #a3a3a3; /* Для старых браузров */
+    background: linear-gradient(to bottom, #a3a3a3, #f0f0f0);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+#content{
+    height: 100%;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+#leftBar{
+    width: 12%;
+    float:left;
+    //background-color: #a3a3a3;
+    background: #f0f0f0;
+    position:absolute;
+    top:0;
+    bottom:0;
+}
+
+#centerPanel{
+    display: inline-block;
+    width: 83%;
+    padding: 5px;
+    border-radius: 6px;
+    padding-left: calc(13% + 15px);
+    min-height: 200px;
+}
+
+#footer{
+    position: relative;
+    height: 10%;
+    //background-color: #a3a3a3;
+    background: #a3a3a3; /* Для старых браузров */
+    background: linear-gradient(to top, #a3a3a3, #f0f0f0);
+    border-radius: 0 0 10px 10px;
+    
+    padding-right: 30px;
+    text-align: right;
+    font-style: italic;
+}
+
+.block{
+    padding: 5px;
+}
+
 .mainCss {
-    border-radius: 4px;
+    border-radius: 12px;
     background-color: gainsboro;
     display: inline-block;
     padding: 7px;
@@ -48,3 +104,14 @@
 #empTable tr:nth-child(1) {
     background: silver;
    }    
+
+.message {
+     display: none;  
+   }
+   
+#lMenu li a{
+      color: teal;
+      text-decoration: none;
+      opacity: 1;
+      margin-left:0;
+   }   
