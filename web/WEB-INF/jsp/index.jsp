@@ -23,7 +23,7 @@
                         <ul id="lMenu">
                             <li><a href="getAll.htm">Show all</a> 
                                 <div class="message">
-                                    Display all employee list. 
+                                    Display employee list. 
                                 </div>  
                             </li>
                             <li><a href="addEmployee.htm">Add new</a>

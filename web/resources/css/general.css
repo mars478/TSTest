@@ -6,6 +6,7 @@
 #wrapper{
     height: auto !important;
     margin: 2% 10% 0 10%;
+    min-width: 900px;
 }
 
 #header{
@@ -24,6 +25,7 @@
 }
 
 #leftBar{
+    min-width: 130px;
     width: 12%;
     float:left;
     //background-color: #a3a3a3;
@@ -38,7 +40,7 @@
     width: 83%;
     padding: 5px;
     border-radius: 6px;
-    padding-left: calc(13% + 15px);
+    padding-left: calc(130px + 3%);
     min-height: 200px;
 }
 
