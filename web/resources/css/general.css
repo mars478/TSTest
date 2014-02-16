@@ -104,10 +104,24 @@
 #empTable tr:nth-child(1) {
     background: silver;
    }    
-
+   
 .message {
+    position: absolute;    
+   }   
+   
+.messageHide {
      display: none;  
    }
+   
+.messageShow {
+     display: inline-block;  
+     background-color: antiquewhite;
+     border-radius: 8px;
+     opacity: 0.95;
+     padding: 8px;
+     width: 150px;
+     left: 120px;
+   }    
    
 #lMenu li a{
       color: teal;
