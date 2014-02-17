@@ -115,6 +115,31 @@ public class EmployeeController {
         return show(model);
     }
     
+    @RequestMapping(value="/ajaxUpd",method=RequestMethod.POST)
+    public ModelAndView ajaxUpdate(String id, String key, String value){
+        key=key.toLowerCase();
+        key=key.replace(" ", "_");
+        Integer tempId = ValueChecker.checkInt(id);
+        if (tempId.intValue()== -1) return new ModelAndView("index");
+        try{
+            Employee emp = (Employee)empServImpl.searchEntity(null, null, null, null, null, null, tempId).get(0);
+
+            HashMap<String,String> update = new HashMap();
+            update.put("first_name", (key.equals("first_name")) ? value : emp.getFirst_name() );
+            update.put("second_name", (key.equals("second_name")) ? value : emp.getSecond_name() );
+            update.put("last_name", (key.equals("last_name")) ? value : emp.getLast_name() );     
+            update.put("age", (key.equals("age")) ? value : ""+emp.getAge() );
+            update.put("experience", (key.equals("experience")) ? value : emp.getExperience() );
+            update.put("description", (key.equals("description")) ? value : emp.getDescription() );
+
+            empServImpl.updateEntity(id, update);
+        } catch (Exception e) {
+            e.printStackTrace();
+            new ModelAndView("index");
+        }
+        return new ModelAndView("index");
+    }
+    
     //Done
     @RequestMapping(value="/deleteEmployee", method=RequestMethod.GET)
     public String delete(String id, Model model) throws SQLException{
@@ -126,4 +151,13 @@ public class EmployeeController {
         return show(model);
     }
 
+    @RequestMapping(value="/ajaxDel", method=RequestMethod.POST)
+    public ModelAndView ajaxDelete(String id) throws SQLException{
+        
+        Integer tempId = ValueChecker.checkInt(id);
+        if (tempId!=null)
+            empServImpl.deleteEntity(tempId);
+        
+        return new ModelAndView("index");
+    }
 }

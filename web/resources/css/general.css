@@ -105,6 +105,7 @@
    
 #empTable tr:nth-child(1) {
     background: silver;
+    font-weight: bold;
    }    
    
 .message {
@@ -131,3 +132,26 @@
       opacity: 1;
       margin-left:0;
    }   
+   
+.edit {
+       max-width: available;
+   }   
+   
+.del {
+    position: absolute;    
+   }   
+   
+.delHide {
+     display: none;  
+   }
+   
+.delShow {
+     cursor: pointer;
+     display: block;  
+     background-color: #FFFFBD;
+     border: solid 1px;
+     //border-radius: 0 3px 3px 0;
+     padding: 2px;
+     text-align: center;
+     width: 50px;
+   }       

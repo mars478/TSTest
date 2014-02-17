@@ -21,7 +21,7 @@
         <div id="wrapper">
             <div id="header" class="block"> 
                 Employee manager. </br>
-                Powered by J2EE+Spring+Hibernate.
+                Powered by J2EE+Spring+Hibernate+AJAX.
             </div>
             <div id="content">
                     <div id="leftBar" class="block">

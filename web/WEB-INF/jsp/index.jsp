@@ -16,7 +16,7 @@
         <div id="wrapper">
             <div id="header" class="block"> 
                 Employee manager. </br>
-                Powered by J2EE+Spring+Hibernate.
+                Powered by J2EE+Spring+Hibernate+AJAX.
             </div>
             <div id="content">
                     <div id="leftBar" class="block">
@@ -36,6 +36,11 @@
                                     Display employee list founded according to the search query. 
                                 </div>  
                             </li>
+                            <li><a href="">Update</a>
+                                <div class="message">
+                                    To update employee data do a doubleclick on required property cell. 
+                                </div>  
+                            </li>
                         </ul>
                     </div>
                     <div id="centerPanel">
@@ -43,14 +48,14 @@
                             <table border="1">
                                 <tr>
                                     <!-- <td>id</td> -->
-                                    <td><b>First Name</b></td>
-                                    <td><b>Second Name</b></td>
-                                    <td><b>Last Name</b></td>
-                                    <td><b>Age</b></td>
-                                    <td><b>Experience</b></td>
-                                    <td><b>Description</b></td> 
-                                    <td colspan="2"></td>
+                                    <td>First Name</td>
+                                    <td>Second Name</td>
+                                    <td>Last Name</td>
+                                    <td>Age</td>
+                                    <td>Experience</td>
+                                    <td>Description</td> 
                                     <!-- 
+                                    <td colspan="2"></td>
                                     <td><a href="addEmployee.htm">Add new</a></td>
                                     <td><a href="searchEmployee.htm">Search</a></td>
                                     -->
@@ -59,14 +64,18 @@
                                     <c:forEach items="${empList}" var="emp"> 
                                     <tr>    
                                         <!--  <td>${emp.id}</td> -->
+                                        <td style="display: none" id="ID">${emp.id}</td>
                                         <td>${emp.first_name}</td>
                                         <td>${emp.second_name}</td>
                                         <td>${emp.last_name}</td>
                                         <td>${emp.age}</td>
                                         <td>${emp.experience}</td>
-                                        <td>${emp.description}</td>
+                                        <td><div class="del">Delete</div>${emp.description} </td>
+                                        <!-- 
+                                        <td><div class="del"><a href="deleteEmployee.htm?id=${emp.id}">Delete</a></div>${emp.description} </td>
                                         <td><a href="updateEmployee.htm?id=${emp.id}">Update</a></td>
                                         <td><a href="deleteEmployee.htm?id=${emp.id}">Delete</a></td>
+                                        -->
                                     </tr>
                                     </c:forEach>
                                 </c:if>
